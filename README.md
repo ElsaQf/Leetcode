@@ -37,3 +37,9 @@ Leetcode总结
 1. 列举罗马数字对应的数值
 2. "M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"
 3. 1000,900,500,400,100,90,50,40,10,9,5,4,1
+
+## 0019 Remove Nth Node From End of List
+移除链表倒数第n个元素
+### 方法：
+1. 设置两个指针，前后相差n个距离移动
+2. 讨论区方法：ListNode** t1 = &head, ListNode* t2 = head;
