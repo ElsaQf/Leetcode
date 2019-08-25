@@ -2,12 +2,12 @@
     Leetcode in Cpp
     Order by Tag
     用c++刷leetcode（比较顺手），按照tag顺序，easy & medium
-# Array    
-## 0001 Two Sum
+## Array    
+### 0001 Two Sum (Easy)
 给定一个数组和一个数字，返回数组中两数之和为给定数字的序号
-### 方法：
+#### 方法：
 - 从头开始遍历，判断两数之和是否等于给定值
-### 优化方法：
+#### 优化方法：
 - 排序
 - 从两头取值，求和
 
