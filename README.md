@@ -11,8 +11,9 @@
 #### 优化方法：
 - 排序
 - 从两头取值，求和
-### 0011 Container with Most Water
+### 0011 Container with Most Water(Medium)
 给定数组，作为水桶高度，序号之差作为宽度，计算最大水容量
+![最大水容量](https://github.com/ElsaQf/Leetcode/blob/master/PictureOfProblem/%E6%9C%80%E5%A4%A7%E6%B0%B4%E5%AE%B9%E9%87%8F.JPG)
 #### 方法：
 - 从头开始遍历，取两个数中小的作为高度h，序号之差作为宽度l，面积a=h*l
 
