@@ -2,6 +2,7 @@
     Leetcode in Cpp
     Order by Tag
     用c++刷leetcode（比较顺手），按照tag顺序，easy & medium
+    
 ## Array    
 ### 0001 Two Sum (Easy)
 给定一个数组和一个数字，返回数组中两数之和为给定数字的序号
@@ -10,6 +11,10 @@
 #### 优化方法：
 - 排序
 - 从两头取值，求和
+### 0011 Container with Most Water
+给定数组，作为水桶高度，序号之差作为宽度，计算最大水容量
+#### 方法：
+- 从头开始遍历，取两个数中小的作为高度h，序号之差作为宽度l，面积a=h*l
 
 ## 0002 Add Two Numbers
 链表数字相加：2->4->3 + 5->6->4 = 7->0->8 链表是倒序
