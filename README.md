@@ -6,21 +6,21 @@
 ## Array    
 ### 0001 Two Sum (Easy)
         给定一个数组和一个数字，返回数组中两数之和为给定数字的序号
-#### 方法：
+方法：
         - 从头开始遍历，判断两数之和是否等于给定值
-#### 优化：
+优化：
         - 排序
         - 从两头取值，求和
 ### 0011 Container with Most Water(Medium)
         给定数组，作为水桶高度，序号之差作为宽度，计算最大水容量
 ![最大水容量](https://github.com/ElsaQf/Leetcode/blob/master/PictureOfProblem/%E6%9C%80%E5%A4%A7%E6%B0%B4%E5%AE%B9%E9%87%8F.JPG)
-#### 方法：
+方法：
         - 从头开始遍历，取两个数中小的作为高度h，序号之差作为宽度l，面积a=h*l
-#### 优化：
+优化：
         - 从两头向中间逼近，每次移动短的边，更新最大面积，这样可以保证遍历所有面积
 ### 0015 3Sum(Medium)
         给定数组，找出所有的三数之和为0
-#### 方法
+方法
         - 固定第一个数nums[i]（从头开始遍历），找出剩下两数之和为-nums[i]
         - 从i+1开始为font, n-1为back
         - 根据sum(nums[font],nums[back])与-nums[i]的关系：font++/back--
