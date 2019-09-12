@@ -25,6 +25,13 @@
         - 从i+1开始为font, n-1为back
         - 根据sum(nums[font],nums[back])与-nums[i]的关系：font++/back--
         - result[0]固定，后面的数字不能重复，确定循环条件
+## Linked List
+#### 0021 Merge Two Sorted Lists（Easy）
+        给定两个有序链表，输出合并后的链表（升序，无需去重）
+#### 方法：
+        - 检查两个链表是否为空，若空，则输出另一个
+        - if...else 分两种情况，大的表头节点需要跟另一个链表的前后两个节点比较
+        - 考虑链表遍历完的情况
 
 
 
