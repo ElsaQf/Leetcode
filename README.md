@@ -39,7 +39,13 @@
         - 设置sum,carry,根据sum与10比较，更新sum和carry
         - i=p->val, j=q->val 根据链表长度变换为0
         - 循环条件是while(p || q || carry)
-
+### 0019 Remove Nth Node From End of the List(Medium)
+        移除链表的倒数第n个元素
+#### 方法：
+        - 倒数第n个元素，为正数l-n
+        - 让第一个指针先走1->n，第二个指针从头开始和第一个指针一起走，直到第一个指针先到达最后一个元素
+        - ListNode *p = head, **q = &head
+        - p = p->next, q = &((*q)->next), *q = (*q)->next, return head
 
 
 
