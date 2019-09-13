@@ -47,7 +47,7 @@
         - ListNode *p = head, **q = &head
         - p = p->next, q = &((*q)->next), *q = (*q)->next, return head
 ## Tree
-### 0100 Same Tree
+### 0100 Same Tree(Easy)
         判断两棵二叉树是否相同（结构相同，对应节点值也相同）
 #### 方法：
         - 遍历，空的位置补-1
