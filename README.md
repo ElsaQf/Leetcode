@@ -46,8 +46,15 @@
         - 让第一个指针先走1->n，第二个指针从头开始和第一个指针一起走，直到第一个指针先到达最后一个元素
         - ListNode *p = head, **q = &head
         - p = p->next, q = &((*q)->next), *q = (*q)->next, return head
-
-
+## Tree
+### 0100 Same Tree
+        判断两棵二叉树是否相同（结构相同，对应节点值也相同）
+#### 方法：
+        - 遍历，空的位置补-1
+        - 比较得到的两个数组是否完全相同
+#### 优化：
+        - 递归
+        - return (p->val==q->val && isSameTree(p->left,q->left) && isSameTree(p->right,q->right))
 
 ## 0005 Longest Palindromic Substring
 最长回形子字符串：abab的最长回形子字符串是aba或bab
