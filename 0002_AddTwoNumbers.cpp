@@ -9,80 +9,36 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int carry = 0;
-        
+        int carry = 0, sum = 0, i = 0, j = 0;
         ListNode *p = l1;
         ListNode *q = l2;
-        
-        ListNode *head = new ListNode(0);
-        head->next = NULL;
-        ListNode *end = head;
-        
-        while(p && q){
-            int sum = p->val + q->val + carry;
+        ListNode *s = new ListNode(0);
+        ListNode *l = s;
+        while(p != NULL || q != NULL || carry == 1){
+            if(p != NULL){
+                i = p->val;
+                p = p->next;
+            }else{
+                i = 0;
+            }
+            if(q != NULL){
+                j = q->val;
+                q = q->next;
+            }else{
+                j = 0;
+            }
+            sum = i + j + carry;
             if(sum >= 10){
-                sum -= 10;
                 carry = 1;
+                sum -= 10;
             }else{
                 carry = 0;
             }
-            ListNode *s = new ListNode(0);
-            s->val = sum;
-            s->next = NULL;
-            end->next = s;
-            end = s;
-            p = p->next;
-            q = q->next;
+            ListNode *r = new ListNode(sum);
+            l->next = r;
+            l = l->next;
         }
-        if(p == NULL && q == NULL && carry == 1){
-            ListNode *s = new ListNode(0);
-            s->val = carry;
-            s->next = NULL;
-            end->next = s;
-            end = s;
-            return head->next;
-        }else if(p == NULL && q != NULL){
-            while(q){
-                int sum = q->val + carry;
-                if(sum >= 10){
-                    sum -= 10;
-                    carry = 1;
-                }else{
-                    carry = 0;
-                }
-                ListNode *s = new ListNode(0);
-                s->val = sum;
-                s->next = NULL;
-                end->next = s;
-                end = s;
-                q = q->next;
-            }
-        }else if(p != NULL && q == NULL){
-            while(p){
-                int sum = p->val + carry;
-                if(sum >= 10){
-                    sum -= 10;
-                    carry = 1;
-                }else{
-                    carry = 0;
-                }
-                ListNode *s = new ListNode(0);
-                s->val = sum;
-                s->next = NULL;
-                end->next = s;
-                end = s;
-                p = p->next;
-            }
-        }
-        
-        if(carry == 1){
-            ListNode *s = new ListNode(0);
-            s->val = carry;
-            s->next = NULL;
-            end->next = s;
-            end = s;
-        }
-        
-        return head->next;
+        s = s->next;
+        return s;
     }
 };
